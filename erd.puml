@@ -29,15 +29,35 @@ entity User {
 User }o..|| Role
 
 
+entity Level {
+    * id: <<uuid>>
+    ---
+    * name: string
+    * creator_id: <<FK>>
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
+}
+
 entity Category {
     * id: <<uuid>>
     ---
     * creator_id: <<FK>>
-    parent_id: <<FK>>
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
 }
 
-Category }o..|| User: creates
-Category }o..|| Category: is in
+entity CategoryExercise {
+    * id: <<uuid>>
+    ---
+    * category_id: <<FK>>
+    * exercise_id: <<FK>>
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
+}
+
 
 entity Exercise {
     * id: <<uuid>>
@@ -48,6 +68,9 @@ entity Exercise {
     * editedAt: timestamp
     deletedAt: timestamp
 }
+
+CategoryExercise }o..|| Category
+CategoryExercise }o..|| Exercise
 
 
 
@@ -90,10 +113,9 @@ entity Level {
     deletedAt: timestamp
 }
 
-Category ||..o{ Exercise
 Exercise ||..o{ Video
 Exercise ||..o{ Comment
-Exercise ||..|{ Level: belongs to
+Exercise }o..|| Level: belongs to
 Video ||..o{ Reaction
 User ||..o{ Comment: creates
 User ||..o{ Reaction: creates
