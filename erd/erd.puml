@@ -1,0 +1,122 @@
+@startuml exercisea
+
+hide circle
+skinparam Linetype ortho
+skinparam Ranksep 60
+skinparam Nodesep 100
+
+entity Role {
+    * id: <<uuid>>
+    ---
+    * name: string
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
+}
+
+entity User {
+    * id: <<uuid>>
+    ---
+    * userName: string
+    * email: string
+    * sex: Male | Female 
+    * hashedPassword: string
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
+}
+
+User }o..|| Role
+
+
+entity Level {
+    * id: <<uuid>>
+    ---
+    * name: string
+    * creator_id: <<FK>>
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
+}
+
+entity Category {
+    * id: <<uuid>>
+    ---
+    * creator_id: <<FK>>
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
+}
+
+entity CategoryExercise {
+    * id: <<uuid>>
+    ---
+    * category_id: <<FK>>
+    * exercise_id: <<FK>>
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
+}
+
+
+entity Exercise {
+    * id: <<uuid>>
+    ---
+    * creator_id: <<FK>>
+    * content: string
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
+}
+
+CategoryExercise }o..|| Category
+CategoryExercise }o..|| Exercise
+
+
+
+entity Video {
+    * id: <<uuid>>
+    ---
+    * creator_id: <<FK>>
+    * urlContent: string
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
+}
+
+entity Reaction {
+    * id: <<uuid>>
+    ---
+    * type: string
+    * creator_id: <<FK>>
+    * createdAt: timestamp
+    deletedAt: timestamp
+}
+
+
+entity Comment {
+    * id: <<uuid>>
+    ---
+    * creator_id: <<FK>>
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
+}
+
+entity Level {
+    * id: <<uuid>>
+    ---
+    * name: string
+    * creator_id: <<FK>>
+    * createdAt: timestamp
+    * editedAt: timestamp
+    deletedAt: timestamp
+}
+
+Exercise ||..o{ Video
+Exercise ||..o{ Comment
+Exercise }o..|| Level: belongs to
+Video ||..o{ Reaction
+User ||..o{ Comment: creates
+User ||..o{ Reaction: creates
+@enduml

@@ -1,0 +1,49 @@
+@startuml exercisea
+left to right direction
+skinparam Linetype ortho
+
+skinparam Shadowing false
+
+skinparam ArrowFontStyle normal
+skinparam ArrowFontName Courier
+skinparam ArrowFontSize 10
+
+title Exercisea Use Case diagrams\n
+actor "Guest" as guest
+actor "Registered" as user
+actor "Admin" as admin
+
+admin -left-|> user 
+
+rectangle Exercisea {
+  usecase "Login" as login
+  usecase "Logout" as logout
+  usecase "Sign up" as signup
+  usecase "Edit profile" as edit_profile
+  usecase "Filter exercises" as filter_ex
+  usecase "View exercises" as view_all_ex
+  usecase "View exercise" as view_ex
+  usecase "Edit exercise" as edit_ex
+  usecase "Create exercise" as create_ex
+  usecase "Delete exercise" as delete_ex 
+  usecase "Comment exercise" as comment_ex 
+  usecase "React to exercise video" as react_to_ex 
+
+  view_all_ex <.up. filter_ex: include
+}
+
+guest --> signup
+
+user --> login
+user --> logout
+user --> edit_profile
+user --> view_ex
+user --> filter_ex
+user --> comment_ex
+user --> react_to_ex
+
+admin --> edit_ex
+admin --> delete_ex
+admin --> create_ex
+
+@enduml

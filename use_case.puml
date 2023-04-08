@@ -1,7 +1,0 @@
-@startuml exercisea
-:User: --> (Use)
-"Admin" as Admin
-"Login" as (Use)
-Admin --> (admin)
-User <|-- Admin
-@enduml

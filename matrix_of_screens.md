@@ -1,15 +1,15 @@
-|                      | Homepage | Kategorie | Partie |     |     |     |     |     |     |     |     |
-| -------------------- | -------- | --------- | ------ | --- | --- | --- | --- | --- | --- | --- | --- |
-| Kategorie-Název      |          |           |        |     |     |     |     |     |     |     |     |
-| Kategorie-Popis      |          |           |        |     |     |     |     |     |     |     |     |
-| Partie-Název         |          |           |        |     |     |     |     |     |     |     |     |
-| Partie-Popis         |          |           |        |     |     |     |     |     |     |     |     |
-| Cviky-Název          |          |           |        |     |     |     |     |     |     |     |     |
-| Cviky-Popis          |          |           |        |     |     |     |     |     |     |     |     |
-| Cviky-Odkaz-na-video |          |           |        |     |     |     |     |     |     |     |     |
-| Uživatel-Jmeno       |          |           |        |     |     |     |     |     |     |     |     |
-| Uživatel-Email       |          |           |        |     |     |     |     |     |     |     |     |
-| Uživatel-Heslo       |          |           |        |     |     |     |     |     |     |     |     |
-| Uživatel-Role        |          |           |        |     |     |     |     |     |     |     |     |
-| Kategorie            |          |           |        |     |     |     |     |     |     |     |     |
-| Kategorie            |          |           |        |     |     |     |     |     |     |     |     |
+|                      | Homepage | ExerciseFilter | Exercise | Contact | UserAccount | Login | SignUp |     |     |     |     |
+| -------------------- | -------- | -------------- | -------- | ------- | ----------- | ----- | ------ | --- | --- | --- | --- |
+| Kategorie-Název      |          | D              |          |         |             |       |        |     |     |     |     |
+| Kategorie-Popis      |          | D              |          |         |             |       |        |     |     |     |     |
+| Partie-Název         |          | D              |          |         |             |       |        |     |     |     |     |
+| Partie-Popis         |          | D              |          |         |             |       |        |     |     |     |     |
+| Cviky-Název          |          |                | D        |         |             |       |        |     |     |     |     |
+| Cviky-Popis          |          |                | D        |         |             |       |        |     |     |     |     |
+| Cviky-Odkaz-na-video |          |                | ED       |         |             |       |        |     |     |     |     |
+| Uživatel-Jmeno       |          |                |          |         | D           | EM    | EDM    |     |     |     |     |
+| Uživatel-Email       |          |                |          |         | D           | EM    | EDM    |     |     |     |     |
+| Uživatel-Heslo       |          |                |          |         |             | E     | EM     |     |     |     |     |
+| Uživatel-Role        |          |                |          |         |             |       |        |     |     |     |     |
+| Cviky-Komentar       |          |                | EDM      |         |             |       |        |     |     |     |     |
+| Video-Reakce         |          |                | EDM      |         |             |       |        |     |     |     |     |
